@@ -18,6 +18,11 @@ public class BookController {
 
         model.addAttribute("books",bookRepository.findAll());
 
-        return "books/list";
+        return "books";
+    }
+    @RequestMapping("/authors")
+    public String getAuthors(Model model){
+        model.addAttribute("books", bookRepository.findAll());
+        return "list";
     }
 }
